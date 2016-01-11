@@ -13,9 +13,7 @@
         <div class="col-md-6">
           <div class="input-group" id="searchBar">
             <!-- 
-
                 Implement a way to filter through listings using the search bar 
-
               -->
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
             <input type="text" class="form-control" placeholder="Search">
@@ -27,13 +25,21 @@
                 <th>Building Name</th>
                 <th></th>
               </tr>
-              <!-- 
 
+              <!-- 
                   Fill in the rest of the table:
                       * populate the rows with the code and name of each listing
-                      * include a way to remove individual listings
+                -->
+              <tr ng-repeat="listing in listings">
+              	<th>{{ listing.code }}</th>
+              	<th>{{ listing.name }}</th>
+              </tr>
 
-                --> 
+              <!-- 
+                  Fill in the rest of the table:
+                      * include a way to remove individual listings
+                -->
+
             </table>
           </div>
           <!-- 
