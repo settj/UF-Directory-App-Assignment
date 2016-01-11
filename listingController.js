@@ -8,10 +8,10 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       as described in the assignment spec. 
      */
     $scope.addListing = function() {
-      $scope.listings.push($index);
+      $scope.listings.push(index);
     };
     $scope.deleteListing = function(index) {
-      $scope.listings.splice($index,1);
+      $scope.listings.splice(index,1);
     };
     $scope.showDetails = function(index) {};
   }
