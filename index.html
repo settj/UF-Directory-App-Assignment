@@ -32,7 +32,6 @@
                       * include a way to remove individual listings
                 -->
               <tr ng-repeat="listing in listings">
-              	<th>{{ $index }}</th>
               	<th>{{ listing.code }}</th>
               	<th>{{ listing.name }}</th>
               	<th ng-click="deleteListing($index)"><button>Remove</button></th>
