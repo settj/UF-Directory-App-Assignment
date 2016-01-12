@@ -35,6 +35,7 @@
               	<th>{{ listing.code }}</th>
               	<th>{{ listing.name }}</th>
               	<th ng-click="deleteListing($index)"><button>Remove</button></th>
+              	<th ng-click="showDetails($index)"><button>Show Detailed Information</button></th>
               </tr>
 
             </table>
@@ -49,11 +50,14 @@
           <div class="jumbotron">
             <h2>Detailed Information</h2>
             <!-- 
-
               Include a way to display detailed information about an individual listing:
                    * consider how to use ng-click within the the table to implement this feature
-
              -->
+             	<p>{{ detailedInfo.name }}</p>
+            	<p>{{ detailedInfo.latitude }}</p>
+            	<p>{{ detailedInfo.longitude }}</p>
+            	<p>{{ detailedInfo.address }}</p>
+            	<p>{{ detailedInfo.description }}</p>
           </div>
         </div>
       </div>
