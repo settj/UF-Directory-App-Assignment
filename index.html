@@ -18,7 +18,7 @@
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
             <input type="text" class="form-control" placeholder="Search">
           </div>
-          <div class="tableWrapper">
+          <div class="tableWrapper" >
             <table class="table table-striped table-hover">
               <tr>
                 <th>Code</th>
@@ -26,19 +26,17 @@
                 <th></th>
               </tr>
 
-              <!-- 
+              <!-- DONE
                   Fill in the rest of the table:
                       * populate the rows with the code and name of each listing
-                -->
-              <tr ng-repeat="listing in listings">
-              	<th>{{ listing.code }}</th>
-              	<th>{{ listing.name }}</th>
-              </tr>
-
-              <!-- 
-                  Fill in the rest of the table:
                       * include a way to remove individual listings
                 -->
+              <tr ng-repeat="listing in listings">
+              	<th>{{ $index }}</th>
+              	<th>{{ listing.code }}</th>
+              	<th>{{ listing.name }}</th>
+              	<th ng-click="deleteListing($index)"><button>Remove</button></th>
+              </tr>
 
             </table>
           </div>
