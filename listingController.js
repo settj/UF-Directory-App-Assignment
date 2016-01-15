@@ -32,7 +32,6 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
 
       $scope.listings.push($scope.newListing);
-      console.log($scope.newListing);
 
       $scope.newListing = {
             code : '',
@@ -49,25 +48,24 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.listings.splice(index,1);
     };
     $scope.showDetails = function(index) {
-      $scope.detailedInfo ={
+      $scope.detailedInfo = {
             name : $scope.listings[index].name,
-            latitude : "", 
-            longitude : "",  
+            coordinates : "",  
             address : "",
-            description: "",
         };
 
 
 
       if ($scope.listings[index].coordinates == undefined && $scope.listings[index].address == undefined) {
-        $scope.detailedInfo.description = "No detailed information available";
+        $scope.detailedInfo.coordinates = "No coordinates available"
+        $scope.detailedInfo.address = "No address available";
       };
       if (!($scope.listings[index].coordinates == undefined)) {
-        $scope.detailedInfo.latitude = $scope.listings[index].coordinates.latitude + '\n';
-        $scope.detailedInfo.longitude = $scope.listings[index].coordinates.longitude + '\n';
+        $scope.detailedInfo.coordinates = "Coordinates: (" + $scope.listings[index].coordinates.latitude + ", " 
+          + $scope.listings[index].coordinates.longitude + ")";
       };
       if (!($scope.listings[index].address == undefined)) {
-        $scope.detailedInfo.address = $scope.listings[index].address;
+        $scope.detailedInfo.address = "Street Address :" + $scope.listings[index].address;
       };
     };
   }
