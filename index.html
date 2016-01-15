@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <title>UF | DIRECTORY</title>
   </head>
   <body ng-app="directoryApp">
 
@@ -37,8 +38,7 @@
               <tr ng-repeat="listing in listings | filter: searchText">
               	<th>{{ listing.code }}</th>
               	<th>{{ listing.name }}</th>
-              	<!-- Move to button -->
-              	<th><button class="btn btn-danger" ng-click="deleteListing($index)"><span class="glyphicon glyphicon-trash"></span></button></th>
+              	<th><button class="btn btn-danger" ng-click="deleteListing(listing)"><span class="glyphicon glyphicon-trash"></span></button></th>
               	<th><button class="btn btn-info" ng-click="showDetails($index)"><span class="glyphicon glyphicon-info-sign"></span></button></th>
               </tr>
             </table>
@@ -48,7 +48,7 @@
 
         <div class="col-md-6">
           <div class="jumbotron">
-            <h2>Detailed Information</h2>
+            <h2>Detailed Information:</h2>
              	<h4>{{ detailedInfo.name }}</h4>
               <ul>
                 <li>{{detailedInfo.coordinates}}</li>
