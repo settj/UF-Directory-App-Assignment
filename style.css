@@ -54,8 +54,8 @@ table {
 */
 
 body {
-  background: #293f50;
-  color: #888;
+  /*background: #293f50;
+  color: #888;*/
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -149,9 +149,10 @@ em {
   ========================================
 */
 
-header {
+header.primary-header {
+	border-bottom: 100px, soild, #B8B8B8; 
 	background: #F0F0F0 ;
-	height: 128px;
+	height: 127px;
 }
 
 .title {
@@ -178,4 +179,5 @@ header {
 .tableWrapper {
   max-height: 400px;
   overflow: auto;
+  border: 5px, solid, #000000;
 }
