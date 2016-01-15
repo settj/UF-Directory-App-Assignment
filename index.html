@@ -36,10 +36,10 @@
                 <th></th>
               </tr>
               <tr ng-repeat="listing in listings | filter: searchText">
-              	<th>{{ listing.code }}</th>
-              	<th>{{ listing.name }}</th>
-              	<th><button class="btn btn-danger" ng-click="deleteListing(listing)"><span class="glyphicon glyphicon-trash"></span></button></th>
-              	<th><button class="btn btn-info" ng-click="showDetails($index)"><span class="glyphicon glyphicon-info-sign"></span></button></th>
+              	<td>{{ listing.code }}</td>
+              	<td>{{ listing.name }}</td>
+              	<td><button class="btn btn-danger" ng-click="deleteListing(listing)"><span class="glyphicon glyphicon-trash"></span></button></td>
+              	<td><button class="btn btn-info" ng-click="showDetails($index)"><span class="glyphicon glyphicon-info-sign"></span></button></td>
               </tr>
             </table>
           </div>
